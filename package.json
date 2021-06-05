@@ -1,0 +1,25 @@
+{
+  "name": "service-template-gateway",
+  "version": "1.0.0",
+  "description": "sample service template for gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muralishankar/service-template-gateway.git"
+  },
+  "author": "muralishankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muralishankar/service-template-gateway/issues"
+  },
+  "homepage": "https://github.com/muralishankar/service-template-gateway#readme",
+  "dependencies": {
+    "@hapi/basic": "^6.0.0",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.1.3",
+    "bcrypt": "^5.0.1"
+  }
+}
