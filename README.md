@@ -1,6 +1,7 @@
 # service-template-authentications.
 
-framework - hapi.js
-auth typs
-        - session
-        - basic
+#### framework 
+- hapi.js
+#### auth types
+- session
+- basic
