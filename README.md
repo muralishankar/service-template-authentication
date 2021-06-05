@@ -1,4 +1,4 @@
-# service-template-gateway
+# service-template-authentications.
 
 framework - hapi.js
 auth typs
