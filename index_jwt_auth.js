@@ -18,28 +18,21 @@ const start = async () => {
     const server = Hapi.server({ port: 4000 });
 
     await server.register(require('hapi-auth-jwt2'));
-    // server.auth.strategy('jwt', 'jwt',
-    // { key: 'NeverShareYourSecret', // Never Share your secret key
-    //   validate  // validate function defined above
-    // });
+
     server.auth.strategy('jwt', 'jwt',
         {
             key: "password",
             validate: async function (decoded, request, h) {
-
-                // do your checks to see if the person is valid
                 if (!people[decoded.id]) {
-                  return { isValid: false };
+                    return { isValid: false };
                 }
                 else {
-                  return { isValid: true };
+                    return { isValid: true };
                 }
             },
-           // verifyOptions: { ignoreExpiration: true }
         });
 
 
-    server.auth.default('jwt');
 
     //server.auth.default('session');
 
@@ -70,7 +63,7 @@ const start = async () => {
                     sid: 12,
                     exp: Math.floor(new Date().getTime() / 1000) + 7 * 24 * 60 * 60
                 }, "password");
-                return {status:"success",token};
+                return { status: "success", token };
             },
             options: {
                 auth: false
