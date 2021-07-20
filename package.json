@@ -4,7 +4,8 @@
   "description": "sample service template for gateway",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -c",
+    "test-cov-html": "lab -r html -o coverage.html"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
     "bcrypt": "^5.0.1",
     "hapi-auth-jwt2": "^10.2.0",
     "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.3",
+    "@hapi/lab": "^24.3.2"
   }
 }
